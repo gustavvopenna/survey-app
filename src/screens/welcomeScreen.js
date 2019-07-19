@@ -19,7 +19,7 @@ const scope = {
 class WelcomeScreen extends Component {
   state = {
     info: {},
-    title: 'Hello!!',
+    title: '',
     subtitle: '',
     start: ''
   }

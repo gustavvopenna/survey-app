@@ -7,21 +7,30 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Emoji = styled.div`
+const Wrapper = styled.div`
   display: flex;
-  width: 25%;
-  justify-content: center;
-  align-items: center;
+`
+
+const Emoji = styled.p`
+  font-size: 3rem;
 `
 
 class Reactions extends Component {
   render() {
     return (
       <Container>
-        <Emoji>😭</Emoji>
-        <Emoji>😐</Emoji>
-        <Emoji>😄</Emoji>
-        <Emoji>😍</Emoji>
+        <Wrapper>
+          <Emoji>😭</Emoji>
+        </Wrapper>
+        <Wrapper>
+          <Emoji>😐</Emoji>
+        </Wrapper>
+        <Wrapper>
+          <Emoji>😄</Emoji>
+        </Wrapper>
+        <Wrapper>
+          <Emoji>😍</Emoji>
+        </Wrapper>
       </Container>
     )
   }
