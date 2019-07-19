@@ -9,7 +9,7 @@ const endpoint =
 
 const ServiceState = props => {
   const initialState = {
-    data: {}
+    info: {}
   }
 
   const [state, dispatch] = useReducer(ServiceReducer, initialState)
@@ -23,10 +23,12 @@ const ServiceState = props => {
       type: GET_DATA,
       payload: response.data
     })
+
+    console.log(state.info)
   }
 
   return (
-    <ServiceContext.Provider value={{ data: state.data, getData }}>
+    <ServiceContext.Provider value={{ info: state.info, getData }}>
       {props.children}
     </ServiceContext.Provider>
   )

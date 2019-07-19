@@ -17,6 +17,6 @@ const AppWithContext = () => (
   </ServiceState>
 )
 
-ReactDOM.render(<AppWithContext />, document.getElementById('root'))
+ReactDOM.render(<AppWithRouter />, document.getElementById('root'))
 
 serviceWorker.unregister()

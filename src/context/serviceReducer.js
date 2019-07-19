@@ -5,9 +5,8 @@ export default (state, action) => {
     case GET_DATA:
       return {
         ...state,
-        data: action.payload
+        info: action.payload
       }
-
     default:
       return state
   }
