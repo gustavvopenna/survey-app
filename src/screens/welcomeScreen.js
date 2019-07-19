@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import ServiceContext from '../context/serviceContext'
 
-const welcomeScreen = () => {
+const WelcomeScreen = props => {
+  const serviceContext = useContext(ServiceContext)
+
+  useEffect(() => {
+    serviceContext.getData()
+  }, [])
+
   return (
     <div>
       <h1>Welcome</h1>
@@ -12,4 +19,4 @@ const welcomeScreen = () => {
   )
 }
 
-export default welcomeScreen
+export default WelcomeScreen
