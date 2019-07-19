@@ -34,13 +34,16 @@ class QuestionScreen extends React.Component {
   }
 
   handleQuestion = e => {
+    if (this.state.questionNumber === this.state.questions.length) {
+      this.props.history.push('/thanks')
+    }
+
     this.setState((prevState, props) => ({
       questionNumber: prevState.questionNumber + 1
     }))
 
     const number = this.state.questionNumber
 
-    console.log(this.state.questionNumber)
     this.setState((prevState, props) => ({
       currentQuestion: prevState.questions[number]
     }))
